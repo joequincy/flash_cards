@@ -129,7 +129,7 @@ class RoundTest < Minitest::Test
     deck = Deck.new([card_1, card_2, card_3])
     round = Round.new(deck)
     round.take_turn("Juneau")
-    rounnd.take_turn("Venus")
+    round.take_turn("Venus")
 
     assert_equal 1, round.percent_correct_by_category(:Geography)
   end
@@ -141,7 +141,7 @@ class RoundTest < Minitest::Test
     deck = Deck.new([card_1, card_2, card_3])
     round = Round.new(deck)
     round.take_turn("Juneau")
-    rounnd.take_turn("Venus")
+    round.take_turn("Venus")
 
     assert_equal 1, round.percent_correct
   end
