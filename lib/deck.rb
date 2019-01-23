@@ -8,4 +8,7 @@ class Deck
   def count
     return @cards.length
   end
+  def cards
+    return @cards
+  end
 end
