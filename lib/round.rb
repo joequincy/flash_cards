@@ -40,9 +40,9 @@ class Round
     return count
   end
   def percent_correct
-    return number_correct * 100 / @turns.count
+    return number_correct * 100.0 / @turns.count
   end
   def percent_correct_by_category(category)
-    return number_correct_by_category(category) * 100 / @deck.cards_in_category(category).length
+    return number_correct_by_category(category) * 100.0 / @deck.cards_in_category(category).length
   end
 end
