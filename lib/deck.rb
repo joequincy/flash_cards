@@ -1,4 +1,5 @@
 class Deck
+  attr_reader :cards
   def initialize(card_array)
     @cards = card_array
   end
@@ -7,9 +8,6 @@ class Deck
   end
   def count
     return @cards.length
-  end
-  def cards
-    return @cards
   end
   def list_categories
     categories = []

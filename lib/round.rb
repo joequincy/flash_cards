@@ -1,20 +1,11 @@
 class Round
+  attr_reader :deck, :current_card, :turns, :categories
   def initialize(deck)
     @deck = deck
     @current_card = deck.cards[0]
     @turns = []
+    @categories = @deck.list_categories
   end
-  # Accessor methods
-  def deck
-    return @deck
-  end
-  def turns
-    return @turns
-  end
-  def current_card
-    return @current_card
-  end
-  # Operation methods
   def take_turn(guess)
     current_turn = Turn.new(guess, @current_card)
     @turns << current_turn
