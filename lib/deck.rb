@@ -3,7 +3,7 @@ class Deck
     @cards = card_array
   end
   def cards_in_category(category)
-    selection = @cards.select{|card| card.category == category}
+    return @cards.select{|card| card.category == category}
   end
   def count
     return @cards.length
@@ -18,5 +18,6 @@ class Deck
         categories << card.category
       end
     end
+    return categories
   end
 end
