@@ -11,4 +11,12 @@ class Deck
   def cards
     return @cards
   end
+  def list_categories
+    categories = []
+    @cards.each do |card|
+      if !categories.include?(card.category)
+        categories << card.category
+      end
+    end
+  end
 end
