@@ -12,3 +12,21 @@ cards << Card.new("What progamming language are we using in this Mod?", "Ruby", 
 
 deck = Deck.new(cards)
 round = Round.new(deck)
+
+def start(round)
+  puts "Welcome! You're playing with #{round.deck.count} cards."
+  puts "--------------------------------------------------------------"
+  while round.turns.length < round.deck.count do
+    puts "This is card number #{round.turns.length + 1} of #{round.deck.count}"
+    puts "Question: #{round.current_card.question}"
+    round.take_turn(gets.chomp)
+    puts round.turns.last.feedback
+  end
+  puts "****** Game over! ******"
+  puts "You had #{round.number_correct} correct guesses out of #{round.deck.count} for a total score of #{round.percent_correct.to_i}%."
+  round.deck.list_categories.each do |category|
+    puts "#{category} - #{round.percent_correct_by_category(category).to_i}%"
+  end
+end
+
+start(round)
