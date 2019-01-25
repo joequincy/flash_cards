@@ -9,6 +9,8 @@ class Round
   def take_turn(guess)
     current_turn = Turn.new(guess, @current_card)
     @turns << current_turn
+    # Since array indexes are zero-based, the length of the Turn array
+    # will now equal the index of the next card in the Deck
     @current_card = @deck.cards[@turns.length]
     return current_turn
   end
