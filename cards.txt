@@ -1,0 +1,20 @@
+"Who is the current star of Doctor Who?","Jodie Whittaker",Entertainment
+"What video game series stars a Runner named Faith?","Mirror's Edge",Entertainment
+"What is the airspeed velocity of an unladen swallow?","African or European?",Entertainment
+"What genre of music is the artist 'Skrillex' best known for?","Dubstep",Entertainment
+"What is the surname of the author of the Lord of the Rings book trilogy?","Tolkein",Entertainment
+"What is the largest continent on Earth by area?","Asia",Geography
+"What country has the most natural lakes?","Canada",Geography
+"What country is Machu Picchu loacated in?","Peru",Geography
+"Which U.S. state has the highest number of active volcanoes?","Alaska",Geography
+"What is the largest country in South America by area?","Brazil",Geography
+"What progamming language are we using in this Mod?","Ruby",Technology
+"What is the name of the company that makes the Firefox web browser?","Mozilla",Technology
+"Which is larger: a petabyte or an exabyte?","exabyte",Technology
+"What does 'LAN' stand for?","Local Area Network",Technology
+"What company makes the popular TI-83 graphing calculator?","Texas Instruments",Technology
+"Which human-made object has traveled farthest from Earth?","Voyager 1",Space
+"What is the largest moon in the Solar System?","Ganymede",Space
+"Who was the first person to use telescopes to look at celestial bodies?","Galileo",Space
+"What is the name of the rocket that launched a Tesla Roadster into space?","Falcon Heavy",Space
+"Which year did the first human land on the moon?","1969",Space
