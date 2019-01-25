@@ -20,7 +20,8 @@ def start(round)
       puts "Which category would you like to play?"
       puts available_categories.join(" | ")
       # Accept responses that don't match capitalization with Category
-      selected_category = available_categories.find{|sym| gets.chomp.downcase == sym.to_s.downcase }
+      user_input = gets.chomp.downcase
+      selected_category = available_categories.find{|sym| user_input == sym.to_s.downcase }
       if selected_category == nil
         puts "There are no cards in that category."
       end
