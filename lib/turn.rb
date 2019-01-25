@@ -16,6 +16,6 @@ class Turn
   def feedback
     # Using the Ternary `if` notation to be concise
     # (conditional expression) ? (code to run if true) : (code to run if false)
-    return self.correct? ? "Correct!" : "Incorrect."
+    return correct? ? "Correct!" : "Incorrect."
   end
 end
