@@ -1,10 +1,12 @@
 class Round
-  attr_reader :deck, :current_card, :turns, :categories
+  attr_reader :deck, :current_card, :turns
   def initialize(deck)
     @deck = deck
     @current_card = deck.cards[0]
     @turns = []
-    @categories = @deck.list_categories
+  end
+  def categories
+    @deck.list_categories
   end
   def take_turn(guess)
     current_turn = Turn.new(guess, @current_card)
@@ -15,13 +17,16 @@ class Round
     return current_turn
   end
   def number_correct
-    count = 0
-    @turns.each do |turn|
-      if turn.correct?
-        count += 1
-      end
+    # count = 0
+    # @turns.each do |turn|
+    #   if turn.correct?
+    #     count += 1
+    #   end
+    # end
+    # return count
+    temp = @turns.inject(0) do |count, turn|
+      turn.correct? ? count + 1 : count
     end
-    return count
   end
   def number_correct_by_category(category)
     count = 0

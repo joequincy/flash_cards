@@ -46,8 +46,4 @@ def start(round)
   end
 end
 
-def string_matches_sym?(string, sym)
-  return string.downcase == sym.to_str.downcase
-end
-
 start(round)

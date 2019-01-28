@@ -1,17 +1,15 @@
 class Turn
   attr_reader :guess, :card
   def initialize(string, card)
-    # In order to accept Guesses as correct, even if they're missing
-    # capitalization or punctuation, use a Regex to replace all non-word
-    # characters (anything that isn't a-z, A-Z, or 0-9) with an empty string,
-    # then downcase the whole thing.
-    @guess = string.gsub(/[\W]+/,"").downcase
+    @guess = string
     @card = card
   end
   def correct?
-    # As with the Guess above, remove extraneous characters and capitalization
-    # from the Answer.
-    return @guess == @card.answer.gsub(/[\W]+/,"").downcase
+    # In order to accept Guesses as correct, even if they're missing
+    # capitalization or punctuation, use a Regex to replace all non-word
+    # characters (anything that isn't a-z, A-Z, or 0-9) with an empty string,
+    # then downcase the whole thing. Same with Answer.
+    return @guess.gsub(/[\W]+/,"").downcase == @card.answer.gsub(/[\W]+/,"").downcase
   end
   def feedback
     # Using the Ternary `if` notation to be concise
